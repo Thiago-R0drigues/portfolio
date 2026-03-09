@@ -9,7 +9,7 @@ function App() {
       <div className='font-mono flex flex-col bg-[#09182E] absolute h-full w-full'>
   
         <div className="flex justify-center pt-8"><Nav/></div>  
-        <div className='flex justify-center h-219'><About/></div>
+        <div className='flex justify-center'><About/></div>
 
       </div>
   )
