@@ -7,7 +7,6 @@ function Nav() {
                 <li className="cursor-pointer hover:border-b-2 hover:border-green-600 hover:border-dotted duration-200"><span className="text-green-600">03.</span> <span className="text-gray-300">Contact</span></li>
                 
             </ul>
-            
         </div>
     )
 }
