@@ -1,16 +1,51 @@
+import { useState } from 'react'
 import './index.css'
 
 
 //NAVIGATION COMPONENT
 const Nav = () => {
 
+
+  const [aboutBorder, setAboutBorder] = useState('cursor-pointer');
+  const [projectsBorder, setProjectsBorder] = useState('cursor-pointer');
+  const [contactBorder, setContactBorder] = useState('cursor-pointer');
+ 
+  // on click the desired li, i want it to have border and the others dont.
+
+  // i have a list with [x, y, z]. If x is clicked,
+
+  function changeAboutBorder() {
+   if (aboutBorder) {
+    setAboutBorder('cursor-pointer border-b-2 border-b-gray-400');
+    setProjectsBorder('cursor-pointer');
+    setContactBorder('cursor-pointer');
+   } 
+  }
+
+  function changeProjectsBorder() {
+   if (projectsBorder) {
+    setAboutBorder('cursor-pointer');
+    setContactBorder('cursor-pointer');
+    setProjectsBorder('cursor-pointer border-b-2 border-b-gray-400');
+
+   } 
+  }
+
+  function changeContactBorder() {
+   if (contactBorder) {
+    setContactBorder('cursor-pointer border-b-2 border-b-gray-400');
+    setProjectsBorder('cursor-pointer');
+    setAboutBorder('cursor-pointer');
+   } 
+  }
+
+
     return (
         <div>
             <ul className="flex flex-row gap-30 text-xl font-mono">
-                <li className="cursor-pointer border-b-2 border-b-gray-400" id="#"><span className="text-green-600">01.</span> <span className="text-gray-300">About</span></li>
-                <li className="cursor-pointer" id="#"><span className="text-green-600">02.</span> <span className="text-gray-300">Projects</span></li>
-                <li className="cursor-pointer" id="#"><span className="text-green-600">03.</span> <span className="text-gray-300">Contact</span></li>
-                
+                <li className={aboutBorder} onClick={changeAboutBorder}><span className="text-green-600">01.</span> <span className="text-gray-300">About</span></li>
+                <li className={projectsBorder} onClick={changeProjectsBorder}><span className="text-green-600">02.</span> <span className="text-gray-300">Projects</span></li>
+                <li className={contactBorder} onClick={changeContactBorder}><span className="text-green-600">03.</span> <span className="text-gray-300">Contact</span></li>
             </ul>
         </div>
     )
@@ -43,11 +78,12 @@ const Contact = () => {
 
 function App() {
 
+
+
   return (
       <div className='font-mono flex flex-col bg-[#09182E] fixed h-full w-full'>
         <div className="flex justify-center pt-8"><Nav/></div>  
         <div className='flex justify-center'><About/></div>
-
       </div>
   )
 }
