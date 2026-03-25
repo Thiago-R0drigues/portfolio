@@ -2,53 +2,44 @@ import { useState } from 'react'
 import './index.css'
 
 
+
 //NAVIGATION COMPONENT
-const Nav = () => {
+const Nav = ({ About, Projects, Contact }) => {
 
+  const [active, setActive] = useState('about');
 
-  const [aboutBorder, setAboutBorder] = useState('cursor-pointer');
-  const [projectsBorder, setProjectsBorder] = useState('cursor-pointer');
-  const [contactBorder, setContactBorder] = useState('cursor-pointer');
- 
-  // on click the desired li, i want it to have border and the others dont.
+  return (
+    <div>
+      <ul className="flex flex-row gap-30 text-xl font-mono">
+        <li 
+        className={active === 'about' ? 
+          'cursor-pointer border-b-2 border-b-gray-400' : 'cursor-pointer'} 
+        onClick={()=> {
+          setActive('about');
+          About();
+        }}><span className="text-green-600">01.</span> <span className="text-gray-300">About</span>
+        </li>
 
-  // i have a list with [x, y, z]. If x is clicked,
+        <li 
+        className={active === 'projects' ? 
+          'cursor-pointer border-b-2 border-b-gray-400' : 'cursor-pointer'}
+        onClick={()=> {
+          setActive('projects');
+          Projects();
+          }}><span className="text-green-600">02.</span> <span className="text-gray-300">Projects</span>
+        </li>
 
-  function changeAboutBorder() {
-   if (aboutBorder) {
-    setAboutBorder('cursor-pointer border-b-2 border-b-gray-400');
-    setProjectsBorder('cursor-pointer');
-    setContactBorder('cursor-pointer');
-   } 
-  }
-
-  function changeProjectsBorder() {
-   if (projectsBorder) {
-    setAboutBorder('cursor-pointer');
-    setContactBorder('cursor-pointer');
-    setProjectsBorder('cursor-pointer border-b-2 border-b-gray-400');
-
-   } 
-  }
-
-  function changeContactBorder() {
-   if (contactBorder) {
-    setContactBorder('cursor-pointer border-b-2 border-b-gray-400');
-    setProjectsBorder('cursor-pointer');
-    setAboutBorder('cursor-pointer');
-   } 
-  }
-
-
-    return (
-        <div>
-            <ul className="flex flex-row gap-30 text-xl font-mono">
-                <li className={aboutBorder} onClick={changeAboutBorder}><span className="text-green-600">01.</span> <span className="text-gray-300">About</span></li>
-                <li className={projectsBorder} onClick={changeProjectsBorder}><span className="text-green-600">02.</span> <span className="text-gray-300">Projects</span></li>
-                <li className={contactBorder} onClick={changeContactBorder}><span className="text-green-600">03.</span> <span className="text-gray-300">Contact</span></li>
-            </ul>
-        </div>
-    )
+        <li 
+        className={active === 'contact' ?
+          'cursor-pointer border-b-2 border-b-gray-400' : 'cursor-pointer'}
+        onClick={()=> {
+          setActive('contact');
+          Contact();
+        }}><span className="text-green-600">03.</span> <span className="text-gray-300">Contact</span>
+        </li>
+      </ul>
+    </div>
+  )
 }
 
 //ABOUT COMPONENT
@@ -64,11 +55,19 @@ const About = () => {
   )
 }
 
+const Projects = () => {
+  return (
+    <div>
+
+    </div>
+  )
+}
+
 //CONTACT COMPONENT
 const Contact = () => {
   return (
     <div>
-      <p>linkedin logo</p>
+      <p><img src="" alt="" /></p>
       <p>github logo</p>
       <p>gmail logo</p>
     </div>
@@ -76,16 +75,32 @@ const Contact = () => {
 }
 
 
+
 function App() {
 
+  const [activeSection, setActiveSection] = useState('about');
 
+  function activateAbout() {
+    setActiveSection('about');
+  }
+  function activateProjects() {
+    setActiveSection('projects');
+  }
+  function activateContact() {
+    setActiveSection('contact');
+  }
 
   return (
-      <div className='font-mono flex flex-col bg-[#09182E] fixed h-full w-full'>
-        <div className="flex justify-center pt-8"><Nav/></div>  
-        <div className='flex justify-center'><About/></div>
+    <div className='font-mono flex flex-col bg-[#09182E] fixed h-full w-full'>
+      <div className="flex justify-center pt-8">
+        <Nav About={activateAbout} Projects={activateProjects} Contact={activateContact} />
       </div>
-  )
-}
 
-export default App
+      <div className='flex justify-center'>
+        {activeSection === 'about' && <About />}
+        {activeSection === 'projects' && <Projects />}
+        {activeSection === 'contact' && <Contact />}
+      </div>
+    </div>)}
+
+      export default App
