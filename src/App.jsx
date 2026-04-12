@@ -73,7 +73,7 @@ const Projects = () => {
             src={colorGeneratorImg} 
             alt={'COLOR GENERATOR'}   
             gitHub={'https://github.com/Thiago-R0drigues/color-generator'}
-            url={'https://color-generator000-5u4btslxe-thiago-r0drigues-projects.vercel.app/'}/>
+            url={'https://color-generator000-5u4btslxe-thiago-r0drigues-projects.vercel.app'}/>
         </li>
       </ul>
     </div>
