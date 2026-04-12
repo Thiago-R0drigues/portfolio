@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './index.css'
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
-import { SiGmail } from "react-icons/si";
+import colorGeneratorImg from './assets/color-generator.png'
 
 //NAVIGATION COMPONENT
 const Nav = ({ About, Projects, Contact, activeSection}) => {
@@ -56,6 +56,9 @@ const Projects = () => {
   return (
     <div>
       <h1 className='text-white'>PROJECTS</h1>
+      <ul>
+        <li><Card title={'Basic Color Generator'} src={colorGeneratorImg} alt={'COLOR GENERATOR'}/></li>
+      </ul>
     </div>
   )
 }
@@ -63,9 +66,10 @@ const Projects = () => {
 const Card = ({title, src, alt}) => {
 
     return (
-      <div className='px-10 py-3'>
-          <img src={src} alt={alt} className='w-30 cursor-pointer'/>
-          {/* <p>{title}</p> */}
+      <div className='flex flex-col items-center hover:scale-110 transition '>
+          <img src={src} alt={alt} className='w-60 cursor-pointer hover:shadow-white'/>
+          <p className='text-gray-300 font-bold text-xl'>{title}</p>
+          <p></p>
       </div>          
 
     )
