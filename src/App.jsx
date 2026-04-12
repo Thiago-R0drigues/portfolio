@@ -64,7 +64,7 @@ const Projects = () => {
             src={portfolioImg} 
             alt={'Portfolio'}   
             gitHub={'https://github.com/Thiago-R0drigues/portfolio'}
-            url={'https://color-generator000-5u4btslxe-thiago-r0drigues-projects.vercel.app/'}/>
+            url={'https://portfolio-iota-ruby-35.vercel.app/'}/>
         </li>
 
         <li>
