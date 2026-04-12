@@ -2,7 +2,9 @@ import { useState } from 'react'
 import './index.css'
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
-import colorGeneratorImg from './assets/color-generator.png'
+import { TbWorldWww } from "react-icons/tb";
+import colorGeneratorImg from './assets/color-generator.png';
+import portfolioImg from './assets/portfolio.png';
 
 //NAVIGATION COMPONENT
 const Nav = ({ About, Projects, Contact, activeSection}) => {
@@ -54,22 +56,42 @@ const About = ({onClick}) => {
 
 const Projects = () => {
   return (
-    <div>
-      <h1 className='text-white'>PROJECTS</h1>
-      <ul>
-        <li><Card title={'Basic Color Generator'} src={colorGeneratorImg} alt={'COLOR GENERATOR'}/></li>
+    <div className='mt-60'>
+      <ul className='flex gap-30 items-baseline'>
+        <li>
+          <Card 
+            title={'Portfolio'} 
+            src={portfolioImg} 
+            alt={'Portfolio'}   
+            gitHub={'https://github.com/Thiago-R0drigues/portfolio'}
+            url={'https://color-generator000-5u4btslxe-thiago-r0drigues-projects.vercel.app/'}/>
+        </li>
+
+        <li>
+          <Card 
+            title={'Basic Color Generator'} 
+            src={colorGeneratorImg} 
+            alt={'COLOR GENERATOR'}   
+            gitHub={'https://github.com/Thiago-R0drigues/color-generator'}
+            url={'https://color-generator000-5u4btslxe-thiago-r0drigues-projects.vercel.app/'}/>
+        </li>
       </ul>
     </div>
   )
 }
 
-const Card = ({title, src, alt}) => {
+const Card = ({title, src, alt, gitHub, url}) => {
 
     return (
-      <div className='flex flex-col items-center hover:scale-110 transition '>
-          <img src={src} alt={alt} className='w-60 cursor-pointer hover:shadow-white'/>
+
+      
+      <div className='flex flex-col items-center'>
+          <a href={url} target='_blank'><img src={src} alt={alt} className='w-60 cursor-pointer'/></a>
           <p className='text-gray-300 font-bold text-xl'>{title}</p>
-          <p></p>
+          <div className='flex gap-5 pt-2'> 
+            <a href={gitHub} target='_blank'><FaGithub size={40} className='text-gray-300 hover:text-gray-400'/></a>
+            <a href={url} target='_blank'><TbWorldWww size={40} className='text-gray-300 hover:text-gray-400'/></a>
+          </div>
       </div>          
 
     )
