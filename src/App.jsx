@@ -11,7 +11,7 @@ const Nav = ({ About, Projects, Contact, activeSection}) => {
 
   return (
     <div>
-      <ul className="flex flex-row gap-30 text-2xl font-mono max-[480px]:text-sm max-[480px]:gap-10">
+      <ul className="flex flex-row gap-30 text-2xl font-mono max-[480px]:text-sm max-[480px]:gap-6 max-[480px]:px-3">
         <li 
         className={activeSection === 'about' ? 
           'cursor-pointer border-b-2 border-b-gray-400' : 'cursor-pointer'} 
@@ -45,10 +45,10 @@ const Nav = ({ About, Projects, Contact, activeSection}) => {
 const About = ({onClick}) => {
 
   return (
-    <div className='font-mono flex flex-col gap-8 pt-30 '>
-      <p className='text-3xl font-black text-gray-300 hover:cursor-default max-[480px]:text-center '>Hi, I'm</p>
-      <p className='text-5xl font-black text-gray-500 hover:cursor-default max-[480px]:text-center max-[480px]:text-3xl'><a href="https://www.linkedin.com/in/thiagorodrigues361/" target="_blank">Thiago Oliveira</a></p>
-      <p className='text-2xl text-gray-400  w-250 text-justify font-mono hover:cursor-default max-[480px]:w-90 max-[480px]:text-center max-[480px]:tracking-tighter max-[480px]:p-8'>Front-end Developer focused on building <span className='underline'>modern</span> and <span className='underline'>responsive</span> <span className="underline">user</span> <span className="underline">interfaces</span>. I enjoy turning <span className='font-black'>ideas</span> into <span className='font-black'>real-world applications</span> using <span className='text-blue-400 hover:text-blue-500 duration-400 ease-in-out'>React</span> and <span className='text-pink-400 hover:text-pink-500 duration-400 ease-in-out'>Tailwind</span>.</p>
+    <div className='font-mono flex flex-col gap-8 pt-30 max-[480px]:pt-9'>
+      <p className='text-3xl font-black text-gray-300 hover:cursor-default max-[480px]:text-center max-[480px]:text-xl'>Hi, I'm</p>
+      <p className='text-5xl font-black text-gray-500 hover:cursor-default max-[480px]:text-center max-[480px]:text-2xl'><a href="https://www.linkedin.com/in/thiagorodrigues361/" target="_blank">Thiago Oliveira</a></p>
+      <p className='text-2xl text-gray-400  w-250 text-justify font-mono hover:cursor-default max-[480px]:w-90 max-[480px]:text-center max-[480px]:tracking-tighter max-[480px]:px-3'>Front-end Developer focused on building <span className='underline'>modern</span> and <span className='underline'>responsive</span> <span className="underline">user</span> <span className="underline">interfaces</span>. I enjoy turning <span className='font-black'>ideas</span> into <span className='font-black'>real-world applications</span> using <span className='text-blue-400 hover:text-blue-500 duration-400 ease-in-out'>React</span> and <span className='text-pink-400 hover:text-pink-500 duration-400 ease-in-out'>Tailwind</span>.</p>
       <button className="border-2 border-green-600 text-green-600 w-60 p-5 mt-5 hover:border-green-400 hover:text-green-400 transition hover:cursor-pointer max-[480px]:ml-15" onClick={onClick}>Projects</button>
     </div>
   )
@@ -56,7 +56,7 @@ const About = ({onClick}) => {
 
 const Projects = () => {
   return (
-    <div className='mt-60'>
+    <div className='mt-60 max-[480px]:mt-30 max-[480px]:scale-80'>
       <ul className='flex gap-30 items-baseline max-[480px]:flex-col max-[480px]:gap-40'>
         <li>
           <Card 
@@ -100,7 +100,7 @@ const Card = ({title, src, alt, gitHub, url}) => {
 const Contact = () => {
 
   return (
-    <div className='text-white border-none pt-70'>
+    <div className='text-white border-none pt-70 max-[480px]:pt-50 max-[480px]:scale-80'>
       <ul className='flex flex-row gap-30 max-[480px]:flex-col max-[480px]:-mt-25'>
         <li><a href="https://github.com/Thiago-R0drigues" target='_blank'><FaGithub size={100} className='cursor-pointer text-gray-300 hover:text-gray-100 transition'/></a></li>
         <li><a href="https://www.linkedin.com/in/thiagorodrigues361/" target='_blank'><FaLinkedinIn size={100} className='cursor-pointer text-gray-300 hover:text-gray-100 transition'/></a></li>
