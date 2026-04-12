@@ -60,12 +60,6 @@ const Projects = () => {
   )
 }
 
-const cardList = [
-  {title: 'Card1', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/960px-GitHub_Invertocat_Logo.svg.png', alt: 'Github image'}, 
-  {title: 'Card2', src: 'https://images.icon-icons.com/3042/PNG/512/linkedin_logo_icon_189254.png', alt: 'Linkedin image'}, 
-  {title: 'Card2', src: '', alt: 'Gmail image'},
-];
-
 const Card = ({title, src, alt}) => {
 
     return (
