@@ -11,7 +11,7 @@ const Nav = ({ About, Projects, Contact, activeSection}) => {
 
   return (
     <div>
-      <ul className="flex flex-row gap-30 text-xl font-mono">
+      <ul className="flex flex-row gap-30 text-2xl font-mono max-[480px]:text-sm max-[480px]:gap-10">
         <li 
         className={activeSection === 'about' ? 
           'cursor-pointer border-b-2 border-b-gray-400' : 'cursor-pointer'} 
@@ -45,11 +45,11 @@ const Nav = ({ About, Projects, Contact, activeSection}) => {
 const About = ({onClick}) => {
 
   return (
-    <div className='font-mono flex flex-col gap-8 pt-50 '>
+    <div className='font-mono flex flex-col gap-8 pt-30 '>
       <p className='text-3xl font-black text-gray-300 hover:cursor-default max-[480px]:text-center '>Hi, I'm</p>
       <p className='text-5xl font-black text-gray-500 hover:cursor-default max-[480px]:text-center max-[480px]:text-3xl'><a href="https://www.linkedin.com/in/thiagorodrigues361/" target="_blank">Thiago Oliveira</a></p>
       <p className='text-2xl text-gray-400  w-250 text-justify font-mono hover:cursor-default max-[480px]:w-90 max-[480px]:text-center max-[480px]:tracking-tighter max-[480px]:p-8'>Front-end Developer focused on building <span className='underline'>modern</span> and <span className='underline'>responsive</span> <span className="underline">user</span> <span className="underline">interfaces</span>. I enjoy turning <span className='font-black'>ideas</span> into <span className='font-black'>real-world applications</span> using <span className='text-blue-400 hover:text-blue-500 duration-400 ease-in-out'>React</span> and <span className='text-pink-400 hover:text-pink-500 duration-400 ease-in-out'>Tailwind</span>.</p>
-      <button className="border-2 border-green-600 text-green-600 w-60 p-5 mt-5 hover:border-green-400 hover:text-green-400 transition hover:cursor-pointer" onClick={onClick}>Projects</button>
+      <button className="border-2 border-green-600 text-green-600 w-60 p-5 mt-5 hover:border-green-400 hover:text-green-400 transition hover:cursor-pointer max-[480px]:ml-15" onClick={onClick}>Projects</button>
     </div>
   )
 }
@@ -57,7 +57,7 @@ const About = ({onClick}) => {
 const Projects = () => {
   return (
     <div className='mt-60'>
-      <ul className='flex gap-30 items-baseline'>
+      <ul className='flex gap-30 items-baseline max-[480px]:flex-col max-[480px]:gap-40'>
         <li>
           <Card 
             title={'Portfolio'} 
@@ -85,7 +85,7 @@ const Card = ({title, src, alt, gitHub, url}) => {
     return (
 
       
-      <div className='flex flex-col items-center'>
+      <div className='flex flex-col items-center hover:scale-120 transition max-[480px]:-mt-25'>
           <a href={url} target='_blank'><img src={src} alt={alt} className='w-60 cursor-pointer'/></a>
           <p className='text-gray-300 font-bold text-xl'>{title}</p>
           <div className='flex gap-5 pt-2'> 
@@ -101,9 +101,9 @@ const Contact = () => {
 
   return (
     <div className='text-white border-none pt-70'>
-      <ul className='flex flex-row gap-30'>
-        <li><a href="https://github.com/Thiago-R0drigues" target='_blank'><FaGithub size={100} className='cursor-pointer text-gray-300 hover:text-gray-200 transition'/></a></li>
-        <li><a href="https://www.linkedin.com/in/thiagorodrigues361/" target='_blank'><FaLinkedinIn size={100} className='cursor-pointer text-gray-300 hover:text-gray-200 transition'/></a></li>
+      <ul className='flex flex-row gap-30 max-[480px]:flex-col max-[480px]:-mt-25'>
+        <li><a href="https://github.com/Thiago-R0drigues" target='_blank'><FaGithub size={100} className='cursor-pointer text-gray-300 hover:text-gray-100 transition'/></a></li>
+        <li><a href="https://www.linkedin.com/in/thiagorodrigues361/" target='_blank'><FaLinkedinIn size={100} className='cursor-pointer text-gray-300 hover:text-gray-100 transition'/></a></li>
       </ul>
     </div>
   )
