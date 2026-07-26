@@ -1,36 +1,71 @@
-# 💻 Thiago Rodrigues — Portfólio
+# Thiago Rodrigues - Portfólio
 
-Portfólio pessoal desenvolvido em **React + Tailwind CSS**, reunindo projetos e informações sobre minha trajetória em desenvolvimento de software.
+Portfólio pessoal desenvolvido para apresentar minha trajetória como desenvolvedor, meus projetos e tecnologias que venho estudando.
 
-🔗 **[Acessar o portfólio ao vivo](https://portfolio-iota-ruby-35.vercel.app/)**
+Atualmente estou direcionando meus estudos para **desenvolvimento Backend com Python**, criando APIs e aplicações para aplicar meus conhecimentos na prática.
 
-## Sobre
+---
 
-Estudante de Análise e Desenvolvimento de Sistemas, em transição de carreira para desenvolvimento de software, com foco em **Python / Backend** e conhecimentos práticos de front-end (React, JavaScript, HTML, CSS).
+## 🚀 Tecnologias utilizadas
 
-## Tecnologias utilizadas neste projeto
+### Frontend
 
 - React
+- JavaScript
 - Tailwind CSS
 - Vite
 
-## Projetos em destaque
+### Backend (estudos)
 
-| Projeto | Descrição | Stack |
-|---|---|---|
-| [color-generator](https://github.com/Thiago-R0drigues/color-generator) | Gerador de paletas de cores | JavaScript |
-| [Site — Psicóloga Jessica Almeida](https://github.com/Thiago-R0drigues/Projeto-Site-Psicologa-Jessica-Almeida) | Site institucional desenvolvido para cliente | JavaScript |
+- Python
+- FastAPI
+- SQLAlchemy
+- PostgreSQL
 
-## Como rodar localmente
+### Ferramentas
 
-```bash
-git clone https://github.com/Thiago-R0drigues/portfolio.git
-cd portfolio
-npm install
-npm run dev
-```
+- Git
+- GitHub
+- VS Code
 
-## Contato
+---
 
-- [LinkedIn](https://www.linkedin.com/in/thiagorodrigues361/)
-- [GitHub](https://github.com/Thiago-R0drigues)
+## 📌 Sobre o projeto
+
+Este projeto foi desenvolvido com o objetivo de criar um portfólio moderno, responsivo e simples, apresentando meus conhecimentos atuais em desenvolvimento web.
+
+Durante a construção, pratiquei:
+
+- Componentização no React;
+- Organização de componentes;
+- Responsividade com Tailwind CSS;
+- Estruturação de uma aplicação frontend;
+- Versionamento utilizando Git.
+
+---
+
+## 📂 Projetos apresentados
+
+### Sistema Biblioteca
+
+Aplicação desenvolvida em Python para gerenciamento de livros.
+
+Conceitos praticados:
+
+- Lógica de programação;
+- Funções;
+- Organização de código;
+- Manipulação de arquivos.
+
+---
+
+### Estoque API
+
+API REST em desenvolvimento utilizando Python e FastAPI.
+
+Conceitos praticados:
+
+- Criação de endpoints;
+- Estruturação de backend;
+- Integração com banco de dados;
+- ORM utilizando SQLAlchemy.
