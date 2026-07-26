@@ -2,6 +2,9 @@
 
 Portfólio pessoal desenvolvido para apresentar minha trajetória como desenvolvedor, meus projetos e tecnologias que venho estudando.
 
+🌐 **Acesse o portfólio:**  
+https://portfolio-iota-ruby-35.vercel.app/
+
 Atualmente estou direcionando meus estudos para **desenvolvimento Backend com Python**, criando APIs e aplicações para aplicar meus conhecimentos na prática.
 
 ---
