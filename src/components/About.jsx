@@ -12,7 +12,7 @@ function About() {
         </h2>
 
 
-        <div className="text-slate-400 text-lg leading-8 space-y-5">
+        <div className="text-slate-400 text-lg leading-8 space-y-5 text-justify">
 
           <p>
             Sou formando em Análise e Desenvolvimento de Sistemas

@@ -66,7 +66,7 @@ function Projects() {
         </h2>
 
 
-        <p className="text-slate-400 mb-12 max-w-2xl">
+        <p className="text-slate-400 mb-12 max-w-2xl text-justify">
           Alguns projetos que desenvolvi durante meus estudos,
           aplicando na prática conceitos de programação e
           desenvolvimento web.
@@ -90,7 +90,7 @@ function Projects() {
               </h3>
 
 
-              <p className="text-slate-400 leading-7 mb-6">
+              <p className="text-slate-400 leading-7 mb-6 text-justify">
                 {project.description}
               </p>
 
