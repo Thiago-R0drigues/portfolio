@@ -19,7 +19,7 @@ function Hero() {
 
         <p className="text-slate-400 max-w-2xl mt-6 text-lg leading-8 text-justify">
 
-          Sou formado em Análise e Desenvolvimento de Sistemas
+          Sou formando em Análise e Desenvolvimento de Sistemas
           e atualmente estou focado em desenvolvimento backend
           utilizando Python, FastAPI e bancos de dados relacionais.
 
